@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plugins — millyrack</title>
+  <meta name="description" content="Full reference for every plugin included in doiksub.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .count-badge {
+      display: inline-block;
+      font-size: 11px; font-weight: 600;
+      background: var(--accent-glow);
+      color: var(--accent);
+      border: 1px solid rgba(139,92,246,.25);
+      border-radius: 99px;
+      padding: 2px 9px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    #plugin-count { transition: opacity .15s; }
+  </style>
+</head>
+<body>
+
+<header class="topbar">
+  <button class="hamburger" id="hamburger-btn" aria-label="Toggle sidebar">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+  </button>
+  <a href="index.html" class="topbar-logo">millyrack <span>docs</span></a>
+  <span class="topbar-tag">doiksub</span>
+  <div class="topbar-spacer"></div>
+  <a href="index.html"           class="topbar-link" data-page="index.html">Home</a>
+  <a href="getting-started.html" class="topbar-link" data-page="getting-started.html">Install</a>
+  <a href="plugins.html"         class="topbar-link" data-page="plugins.html">Plugins</a>
+  <a href="contributing.html"    class="topbar-link" data-page="contributing.html">Contributing</a>
+  <a href="https://github.com/ghxstprey/doiksub" class="topbar-link" target="_blank" rel="noopener">GitHub ↗</a>
+</header>
+
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+<div class="layout">
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-label">Overview</div>
+      <a href="index.html" class="sidebar-link" data-page="index.html">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Home
+      </a>
+      <a href="getting-started.html" class="sidebar-link" data-page="getting-started.html">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 14 14"/></svg>
+        Getting Started
+      </a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Categories</div>
+      <a href="#" class="sidebar-link sidebar-filter" data-filter="all">All Plugins</a>
+      <a href="#" class="sidebar-link sidebar-filter" data-filter="privacy">Privacy / Stealth</a>
+      <a href="#" class="sidebar-link sidebar-filter" data-filter="utility">Utility</a>
+      <a href="#" class="sidebar-link sidebar-filter" data-filter="qol">QoL</a>
+      <a href="#" class="sidebar-link sidebar-filter" data-filter="fun">Fun / Social</a>
+      <a href="#" class="sidebar-link sidebar-filter" data-filter="cosmetic">Cosmetic</a>
+      <a href="#" class="sidebar-link sidebar-filter" data-filter="voice">Voice</a>
+      <a href="#" class="sidebar-link sidebar-filter" data-filter="media">Media</a>
+      <a href="#" class="sidebar-link sidebar-filter" data-filter="desktop">Desktop only</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Dev</div>
+      <a href="contributing.html" class="sidebar-link" data-page="contributing.html">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Contributing
+      </a>
+    </div>
+  </nav>
+
+  <main class="main">
+    <div class="content">
+
+      <h1>Plugin Reference <span class="count-badge" id="plugin-count">72</span></h1>
+      <p class="lead">every plugin shipped with doiksub. search or filter by category.</p>
+
+      <div class="search-bar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="plugin-search" placeholder="search plugins…" autocomplete="off" spellcheck="false">
+      </div>
+
+      <div class="filter-bar" id="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="privacy">Privacy</button>
+        <button class="filter-btn" data-filter="utility">Utility</button>
+        <button class="filter-btn" data-filter="qol">QoL</button>
+        <button class="filter-btn" data-filter="fun">Fun</button>
+        <button class="filter-btn" data-filter="cosmetic">Cosmetic</button>
+        <button class="filter-btn" data-filter="voice">Voice</button>
+        <button class="filter-btn" data-filter="media">Media</button>
+        <button class="filter-btn" data-filter="desktop">Desktop</button>
+      </div>
+
+      <div class="plugin-table-wrap" id="plugin-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Plugin</th>
+              <th>Description</th>
+              <th>Category</th>
+            </tr>
+          </thead>
+          <tbody id="plugin-tbody">
+            <!-- Rows injected by JS below -->
+          </tbody>
+        </table>
+      </div>
+
+      <div id="no-results">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        no plugins match that search.
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="nav.js"></script>
+<script>
+const PLUGINS = [
+  { name: "accountPanelServerProfile", desc: "right-click your account panel (bottom left) to view your profile in the current server.", tags: ["qol"] },
+  { name: "anonymiseFileNames",         desc: "anonymise uploaded file names before sending.",                                              tags: ["privacy"] },
+  { name: "autoReact",                  desc: "automatically react with emojis to messages from specific users. supports multiple user:emoji pairs.", tags: ["utility"] },
+  { name: "autoTranslateNightcord",     desc: "automatic translation for nightcord channels.",                                             tags: ["utility"] },
+  { name: "avatarGrabber",              desc: "/avatar grabs the full-resolution avatar of any user (or yourself).",                       tags: ["utility"] },
+  { name: "betterSessions",             desc: "checks for new login sessions in the background and shows notifications when detected.",     tags: ["privacy", "utility"] },
+  { name: "biggerStreamPreview",        desc: "allows you to enlarge stream previews.",                                                    tags: ["qol"] },
+  { name: "calculator",                 desc: "/calc — do quick maths right in the chat box.",                                             tags: ["utility"] },
+  { name: "callTimer",                  desc: "adds a timer to voice channels.",                                                           tags: ["voice", "qol"] },
+  { name: "clearURLs",                  desc: "automatically removes tracking elements from URLs you send.",                               tags: ["privacy"] },
+  { name: "clientTheme",                desc: "recreation of the old client theme experiment — add a colour to your Discord UI.",          tags: ["cosmetic"] },
+  { name: "copyEmojiMarkdown",          desc: "copy the raw unicode character instead of :name: for default emojis.",                     tags: ["utility"] },
+  { name: "copyFileContents",           desc: "adds a button to text file attachments to copy their contents.",                           tags: ["utility"] },
+  { name: "copyStickerLinks",           desc: "adds the ability to copy & open sticker links.",                                           tags: ["utility"] },
+  { name: "copyUserURLs",               desc: "adds a 'copy user URL' option to the user context menu.",                                  tags: ["utility"] },
+  { name: "crashHandler",               desc: "handles and possibly recovers from Discord crashes without needing a full restart.",        tags: ["utility"] },
+  { name: "customProfile",              desc: "entirely change what your profile looks like .",                                           tags: ["cosmetic"] },
+  { name: "customRPC",                  desc: "add a fully customisable rich presence (game status) to your Discord profile.",            tags: ["cosmetic"] },
+  { name: "decor",                      desc: "create and use your own custom avatar decorations, or pick from presets.",                  tags: ["cosmetic"] },
+  { name: "devCompanion.dev",           desc: "dev companion plugin.",                                                                    tags: ["utility"] },
+  { name: "disableCallIdle",            desc: "disables auto-disconnect from DM voice calls after 3 minutes and prevents AFK moves.",    tags: ["voice", "qol"] },
+  { name: "doiksubToolbox",             desc: "adds a titlebar button housing doiksub quick actions, built on top of Vencord's toolbox.", tags: ["utility"] },
+  { name: "experiments",                desc: "changes the help (?) toolbar button to Discord's developer experiments menu.",             tags: ["utility"] },
+  { name: "expressionCloner",           desc: "clone emotes & stickers to your own server via right-click.",                             tags: ["utility"] },
+  { name: "fakeAccount",                desc: "right-click → add a user to the switcher. clicking them makes your profile take their appearance locally.", tags: ["privacy", "fun"] },
+  { name: "fakeDM",                     desc: "inject fake local messages into a DM or group DM. persistent across restarts.",            tags: ["fun"] },
+  { name: "fakeEdit",                   desc: "fake-edit messages by appending a zero-width space.",                                      tags: ["fun", "privacy"] },
+  { name: "fakeFriends",                desc: "locally simulate Discord friends and friend requests. persistent between reloads.",        tags: ["fun"] },
+  { name: "fakeGhost",                  desc: "appear muted or deafened to others.",                                                      tags: ["privacy", "voice"] },
+  { name: "fakeNitro",                  desc: "send fake emojis/stickers, use nitro themes, and stream in nitro quality.",               tags: ["fun", "cosmetic"] },
+  { name: "fakeProfileThemes",          desc: "profile theming via invisible 3y3-encoded colors hidden in your bio.",                     tags: ["cosmetic", "privacy"] },
+  { name: "fakeSystemMessage",          desc: "inject fake system messages into channels. only visible to you. use /fakesysmsg.",        tags: ["fun"] },
+  { name: "fakeTag",                    desc: "show a fake tag next to your name.",                                                       tags: ["cosmetic", "fun"] },
+  { name: "fakeTyping",                 desc: "simulate infinite typing in channels. use /infinitype.",                                   tags: ["fun", "privacy"] },
+  { name: "favGifSearch",               desc: "adds a search bar to your favourite GIFs.",                                               tags: ["qol"] },
+  { name: "fixImagesQuality",           desc: "loads images at their original resolution instead of Discord's compressed version.",      tags: ["media", "qol"] },
+  { name: "fixSpotifyEmbeds",           desc: "fixes Spotify embeds being way too loud by letting you set the volume. (desktop)",        tags: ["media", "desktop"] },
+  { name: "fixYoutubeEmbeds",           desc: "bypasses YouTube videos blocked in Discord embeds (e.g. UMG blocks). (desktop)",         tags: ["media", "desktop"] },
+  { name: "iLoveSpam",                  desc: "prevent Discord from hiding messages from 'likely spammers'.",                             tags: ["utility", "qol"] },
+  { name: "impersonate",                desc: "locally simulate a message sent by any user via /impersonate. only visible to you.",      tags: ["fun"] },
+  { name: "injectAs",                   desc: "right-click any message to inject a fake local reply as that user.",                      tags: ["fun"] },
+  { name: "messageLogger",              desc: "temporarily logs deleted and edited messages. merges Vencord's logger with Equicord's enhanced version.", tags: ["utility", "privacy"] },
+  { name: "mimic",                      desc: "automatically echoes messages sent by a specified user.",                                  tags: ["fun"] },
+  { name: "noBadges",                   desc: "hides user badges.",                                                                       tags: ["cosmetic", "qol"] },
+  { name: "noF1",                       desc: "disables the F1 help keybind.",                                                            tags: ["qol"] },
+  { name: "noNitroUpsell",              desc: "removes Discord's Nitro upsells by tricking the client into thinking you have Nitro.",   tags: ["qol", "cosmetic"] },
+  { name: "noOnboardingDelay",          desc: "skips the slow and annoying server onboarding delay.",                                    tags: ["qol"] },
+  { name: "noRPC",                      desc: "disables Discord's RPC server.",                                                           tags: ["privacy", "utility"] },
+  { name: "noTypingAnimation",          desc: "disables the CPU-intensive typing indicator dots animation.",                             tags: ["qol"] },
+  { name: "pauseInvitesForever",        desc: "restores the option to pause invites indefinitely (Discord removed this).",               tags: ["utility"] },
+  { name: "permissionFreeWill",         desc: "disables client-side restrictions for channel permission management.",                    tags: ["utility"] },
+  { name: "pinDms",                     desc: "pin private channels to the top of your DM list. right-click to pin/unpin or reorder.   ", tags: ["qol"] },
+  { name: "platformIndicators",         desc: "adds platform indicators (desktop, mobile, web) next to users.",                         tags: ["utility", "qol"] },
+  { name: "platformSpoofer",            desc: "spoof what platform or device you're on (default: mobile).",                             tags: ["privacy"] },
+  { name: "previewMessage",             desc: "preview your message before sending it.",                                                  tags: ["utility", "qol"] },
+  { name: "quickReply",                 desc: "reply (Ctrl+Up/Down) and edit (Ctrl+Shift+Up/Down) messages via keybinds.",              tags: ["qol"] },
+  { name: "readAllNotificationsButton", desc: "read all server notifications with a single button click.",                               tags: ["qol"] },
+  { name: "replyHistory",               desc: "shows the full chain of reply history above a message. useful for screenshots or context.", tags: ["utility", "qol"] },
+  { name: "reverseImageSearch",         desc: "adds image search to image context menus.",                                               tags: ["utility"] },
+  { name: "serverInfo",                 desc: "allows you to view info about a server.",                                                  tags: ["utility"] },
+  { name: "shikiCodeblocks",            desc: "VSCode-style syntax-highlighted code blocks powered by Shiki. (desktop)",                 tags: ["utility", "desktop"] },
+  { name: "showHiddenThings",           desc: "displays hidden & moderator-only things regardless of your permissions.",                tags: ["utility"] },
+  { name: "silentTyping",               desc: "hide that you are typing.",                                                                tags: ["privacy"] },
+  { name: "spotifyCrack",               desc: "free listen-along, no auto-pausing in voice chat, keeps activity playing while idle.",   tags: ["media", "voice"] },
+  { name: "spotifyShareCommands",       desc: "share your current Spotify track, album, or artist via /track, /album, /artist.",        tags: ["media", "utility"] },
+  { name: "stickyVoiceChannel",         desc: "lock yourself to a voice channel and auto-reconnect if moved or disconnected.",          tags: ["voice"] },
+  { name: "userVoiceShow",              desc: "shows an indicator when a user is in a voice channel.",                                   tags: ["voice", "qol"] },
+  { name: "validReply",                 desc: "fixes 'message could not be loaded' on hovering over a reply.",                          tags: ["qol"] },
+  { name: "validUser",                  desc: "fix mentions for unknown users showing as '@unknown-user' (hover to fix).",              tags: ["qol"] },
+  { name: "viewIcons",                  desc: "makes avatars and banners clickable; adds view icon/banner to user, server, group menus.", tags: ["utility", "qol"] },
+  { name: "viewRaw",                    desc: "copy and view the raw content/data of any message, channel, or guild.",                  tags: ["utility"] },
+  { name: "voiceDownload",              desc: "adds a download button to voice messages (opens in a new tab).",                         tags: ["voice", "utility"] },
+  { name: "voiceMessages",              desc: "send voice messages like on mobile. right-click the upload button → send voice message.", tags: ["voice"] },
+  { name: "youtubeAdblock",             desc: "blocks ads in YouTube embeds and the WatchTogether activity via AdGuard. (desktop)",     tags: ["media", "desktop"] },
+];
+
+const TAG_HTML = {
+  privacy:  '<span class="tag tag-privacy">privacy</span>',
+  utility:  '<span class="tag tag-utility">utility</span>',
+  qol:      '<span class="tag tag-qol">qol</span>',
+  fun:      '<span class="tag tag-fun">fun</span>',
+  cosmetic: '<span class="tag tag-cosmetic">cosmetic</span>',
+  voice:    '<span class="tag tag-voice">voice</span>',
+  media:    '<span class="tag tag-media">media</span>',
+  desktop:  '<span class="tag tag-desktop">desktop</span>',
+};
+
+const tbody      = document.getElementById('plugin-tbody');
+const searchEl   = document.getElementById('plugin-search');
+const noResults  = document.getElementById('no-results');
+const countEl    = document.getElementById('plugin-count');
+const filterBtns = document.querySelectorAll('.filter-btn');
+const sidebarFilters = document.querySelectorAll('.sidebar-filter');
+
+let activeFilter = 'all';
+let activeSearch = '';
+
+function tagsHtml(tags) {
+  return tags.map(t => TAG_HTML[t] || `<span class="tag">${t}</span>`).join(' ');
+}
+
+function render() {
+  const q = activeSearch.toLowerCase().trim();
+
+  let visible = 0;
+  tbody.innerHTML = '';
+
+  PLUGINS.forEach(p => {
+    const matchSearch = !q || p.name.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q);
+    const matchFilter = activeFilter === 'all' || p.tags.includes(activeFilter);
+    if (!matchSearch || !matchFilter) return;
+    visible++;
+    const tr = document.createElement('tr');
+    tr.setAttribute('data-filter', p.tags.join(' '));
+    tr.innerHTML = `
+      <td><code>${p.name}</code></td>
+      <td>${p.desc}</td>
+      <td>${tagsHtml(p.tags)}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  noResults.style.display = visible === 0 ? 'block' : 'none';
+  document.getElementById('plugin-table-wrap').style.display = visible === 0 ? 'none' : '';
+  countEl.textContent = visible;
+}
+
+searchEl.addEventListener('input', () => { activeSearch = searchEl.value; render(); });
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    activeFilter = btn.dataset.filter;
+    filterBtns.forEach(b => b.classList.toggle('active', b === btn));
+    // sync sidebar
+    sidebarFilters.forEach(b => b.classList.toggle('active', b.dataset.filter === activeFilter));
+    render();
+  });
+});
+
+sidebarFilters.forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    activeFilter = btn.dataset.filter;
+    sidebarFilters.forEach(b => b.classList.toggle('active', b === btn));
+    filterBtns.forEach(b => b.classList.toggle('active', b.dataset.filter === activeFilter));
+    render();
+  });
+});
+
+render();
+</script>
+</body>
+</html>

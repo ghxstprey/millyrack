@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>millyrack doiksub docs</title>
+  <meta name="description"
+    content="millyrack is the docs for doiksub, a vencord fork with custom plugins and feature packs for discord.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle sidebar">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+    <a href="index.html" class="topbar-logo">millyrack <span>docs</span></a>
+    <div class="topbar-spacer"></div>
+    <a href="index.html" class="topbar-link" data-page="index.html">Home</a>
+    <a href="getting-started.html" class="topbar-link" data-page="getting-started.html">Install</a>
+    <a href="plugins.html" class="topbar-link" data-page="plugins.html">Plugins</a>
+    <a href="contributing.html" class="topbar-link" data-page="contributing.html">Contributing</a>
+    <a href="https://github.com/ghxstprey/doiksub" class="topbar-link" target="_blank" rel="noopener">GitHub</a>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <div class="layout">
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-label">Overview</div>
+        <a href="index.html" class="sidebar-link" data-page="index.html">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          Home
+        </a>
+        <a href="getting-started.html" class="sidebar-link" data-page="getting-started.html">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 8 12 12 14 14" />
+          </svg>
+          Getting Started
+        </a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Reference</div>
+        <a href="plugins.html" class="sidebar-link" data-page="plugins.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22v-5M9 6V2m6 4V2m3 6v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z" />
+          </svg>
+          Plugin Reference
+        </a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Dev</div>
+        <a href="contributing.html" class="sidebar-link" data-page="contributing.html">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          </svg>
+          Contributing
+        </a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Links</div>
+        <a href="https://github.com/ghxstprey/doiksub" class="sidebar-link" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+          </svg>
+          GitHub
+        </a>
+        <a href="https://github.com/Vendicated/Vencord" class="sidebar-link" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 18 22 12 16 6" />
+            <polyline points="8 6 2 12 8 18" />
+          </svg>
+          Vencord
+        </a>
+      </div>
+    </nav>
+
+    <main class="main">
+      <div class="content">
+
+        <div class="hero">
+          <h1>welcome to <span class="accent">millyrack</span></h1>
+          <p class="lead">
+            the docs for <strong>doiksub</strong>, a vencord fork with a custom plugin set, questionable features and
+            ports from equicord.
+          </p>
+          <div class="hero-actions">
+            <a href="getting-started.html" class="btn btn-primary">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="13 2 13 9 20 9" />
+                <path d="M3 15v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+              </svg>
+              Get Started
+            </a>
+            <a href="plugins.html" class="btn btn-ghost">Browse Plugins</a>
+          </div>
+        </div>
+
+        <h2 id="what-is-doiksub">what is doiksub?</h2>
+        <p>
+          doiksub is a fork of <a href="https://github.com/Vendicated/Vencord" target="_blank"
+            rel="noopener">vencord</a> built with a curated set of plugins. some from vencord, some ported from equicord
+          (another vencord fork)
+          and some written from scratch/stolen from nightcord. it's okay though, nightcord got outed for being a
+          key & token logger lol.
+        </p>
+
+        <h2 id="quick-nav">jump to</h2>
+        <div class="card-grid">
+          <a href="getting-started.html" class="card">
+            <div class="card-title">Getting Started</div>
+            <div class="card-desc">install, build and inject doiksub into your client.</div>
+          </a>
+          <a href="plugins.html" class="card">
+            <div class="card-title">Plugin Reference</div>
+            <div class="card-desc">all plugins with tags and descriptions.</div>
+          </a>
+          <a href="contributing.html" class="card">
+            <div class="card-title">Contributing</div>
+            <div class="card-desc">how to write plugins and push changes.</div>
+          </a>
+        </div>
+
+        <h2 id="devs">devs</h2>
+        <div class="devs">
+          <div class="dev-card">
+            <div class="dev-avatar">g</div>
+            <div>
+              <div class="dev-name">ghxstprey</div>
+              <div class="dev-handle">ghxst</div>
+              <div class="dev-focus">things that change what you appear as (client side tho)</div>
+            </div>
+          </div>
+          <div class="dev-card">
+            <div class="dev-avatar">o</div>
+            <div>
+              <div class="dev-name">OddyNuff</div>
+              <div class="dev-handle">oddy</div>
+              <div class="dev-focus">qol and cosmetics</div>
+            </div>
+          </div>
+          <div class="dev-card">
+            <div class="dev-avatar">s</div>
+            <div>
+              <div class="dev-name">sqzass</div>
+              <div class="dev-handle">sqz</div>
+              <div class="dev-focus">i be sqzing azz (trolling)</div>
+            </div>
+          </div>
+          <div class="dev-card">
+            <div class="dev-avatar">y</div>
+            <div>
+              <div class="dev-name">yungpharaoh</div>
+              <div class="dev-handle">god</div>
+              <div class="dev-focus">misc and random</div>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="license">license</h2>
+        <p>doiksub is licensed under <strong>gpl-3.0-or-later</strong>. its a fork of <a
+            href="https://github.com/Vendicated/Vencord" target="_blank" rel="noopener">vencord</a> which is copyright
+          2022 vendicated and contributors.</p>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="nav.js"></script>
+</body>
+
+</html>
