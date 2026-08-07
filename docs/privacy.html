@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>millyrack, doiksub privacy</title>
+    <meta name="description" content="temp email providers and basic opsec for discord alts and modded clients">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle sidebar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round">
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+        </button>
+        <a href="index.html" class="topbar-logo">millyrack <span>docs</span></a>
+        <span class="topbar-tag">doiksub</span>
+        <div class="topbar-spacer"></div>
+        <a href="index.html" class="topbar-link" data-page="index.html">home</a>
+        <a href="getting-started.html" class="topbar-link" data-page="getting-started.html">install</a>
+        <a href="plugins.html" class="topbar-link" data-page="plugins.html">plugins</a>
+        <a href="contributing.html" class="topbar-link" data-page="contributing.html">contributing</a>
+        <a href="https://github.com/ghxstprey/doiksub" class="topbar-link" target="_blank" rel="noopener">github</a>
+    </header>
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <div class="layout">
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-label">overview</div>
+                <a href="index.html" class="sidebar-link" data-page="index.html">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                    </svg>
+                    home
+                </a>
+                <a href="getting-started.html" class="sidebar-link" data-page="getting-started.html">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <polygon points="10 8 16 12 10 16 10 8" />
+                    </svg>
+                    getting started
+                </a>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-label">on this page</div>
+                <a href="#how-to-pr" class="sidebar-link">pull requests</a>
+                <a href="#write-plugin" class="sidebar-link">writing plugins</a>
+                <a href="#plugin-rules" class="sidebar-link">plugin rules</a>
+                <a href="#ai-notice" class="sidebar-link">ai policy</a>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-label">reference</div>
+                <a href="plugins.html" class="sidebar-link" data-page="plugins.html">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="7" width="20" height="14" rx="2" />
+                        <path d="M16 7V5a2 2 0 0 0-4 0v2" />
+                        <line x1="12" y1="12" x2="12" y2="16" />
+                        <line x1="10" y1="14" x2="14" y2="14" />
+                    </svg>
+                    plugin reference
+                </a>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-label">dev</div>
+                <a href="contributing.html" class="sidebar-link" data-page="contributing.html">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    contributing
+                </a>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-label">extras</div>
+                <a href="privacy.html" class="sidebar-link" data-page="privacy.html">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                    temp emails
+                </a>
+            </div>
+        </nav>
+
+        <main class="main">
+            <div class="content">
+
+                <h1>temp emails and opsec</h1>
+                <p class="lead">temp emails are just good in general but i dont want people doxxing themselves just
+                    cause its the best way to get a reply from me.</p>
+
+                <h2 id="why">why use them</h2>
+                <p>discord support, random server verifications and modded client feedback forms always ask for an
+                    email. if u hand over ur personal gmail ur basically tying ur real identity to whatever ur doing.
+                    temp inboxes let u get the verification code or support reply without leaving a paper trail.</p>
+
+                <div class="callout warn">
+                    <div>
+                        <p><strong>dont use temp domains for ur main acc.</strong> discord flags a lot of these domains
+                            and u might get locked out or banned. if u need a permanent burner for ur main, use
+                            something like protonmail, atomic mail, or simplelogin.</p>
+                    </div>
+                </div>
+
+                <h2 id="services">recommended providers</h2>
+                <ul>
+                    <li><strong>mail.tm</strong> - super fast, reliable and has a clean api if ur making scripts or
+                        selfbots that need to auto verify</li>
+                    <li><strong>atomic mail</strong> - decent UI, discord support, and also permanent inbox. not a big
+                        company, but still privacy focused</li>
+                    <li><strong>proton mail</strong> - not temp but if u need a permanent inbox that doesnt log ur ip or
+                        sell ur data, use this. pair it with simplelogin for aliases</li>
+                    <li><strong>guerrilla mail</strong> - the classic. UI is scuffed but it works when everything else
+                        is down</li>
+                    <li><strong>10minutemail</strong> - good for literally just grabbing one code and forgetting about
+                        it</li>
+                </ul>
+
+                <h2 id="tips">general tips</h2>
+                <ul>
+                    <li>never use an email tied to ur real name or main socials for discord alt accounts</li>
+                    <li>if a service requires phone verification too, look into sms pooling sites or just use a
+                        different alt</li>
+                    <li>clear ur cookies and use a different fingerprint if ur making alts on the same machine</li>
+                </ul>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="nav.js"></script>
+</body>
+
+</html>

@@ -347,11 +347,6 @@ details p {
   font-size: 13.5px;
 }
 
-.callout-icon {
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-
 .callout.note {
   background: rgba(99, 102, 241, .1);
 }
@@ -615,44 +610,27 @@ td:first-child code {
   letter-spacing: .2px;
 }
 
-.tag-privacy {
-  background: rgba(239, 68, 68, .12);
-  color: #f87171;
-}
-
-.tag-utility {
-  background: rgba(99, 102, 241, .12);
-  color: #818cf8;
-}
-
-.tag-fun {
-  background: rgba(251, 146, 60, .12);
-  color: #fb923c;
-}
-
-.tag-cosmetic {
-  background: rgba(167, 243, 208, .12);
-  color: #6ee7b7;
-}
-
-.tag-voice {
-  background: rgba(99, 179, 237, .12);
-  color: #63b3ed;
-}
-
+.tag-privacy,
+.tag-sigil,
+.tag-utility,
+.tag-developers,
+.tag-chat,
+.tag-appearance,
+.tag-servers,
+.tag-roles,
+.tag-shortcuts,
+.tag-activity,
+.tag-commands,
+.tag-emotes,
+.tag-friends,
+.tag-organisation,
+.tag-customisation,
+.tag-notifications,
+.tag-cosmetic,
+.tag-voice,
 .tag-media {
-  background: rgba(196, 181, 253, .12);
-  color: #c4b5fd;
-}
-
-.tag-qol {
-  background: rgba(52, 211, 153, .12);
-  color: #34d399;
-}
-
-.tag-desktop {
-  background: rgba(148, 163, 184, .12);
-  color: #94a3b8;
+  background: rgba(100, 100, 100, .2);
+  color: #777777;
 }
 
 .steps {
