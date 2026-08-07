@@ -1,130 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Getting Started — millyrack</title>
+  <title>millyrack</title>
   <meta name="description" content="How to install, build, and inject doiksub into your Discord client.">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header class="topbar">
-  <button class="hamburger" id="hamburger-btn" aria-label="Toggle sidebar">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-    </svg>
-  </button>
-  <a href="index.html" class="topbar-logo">millyrack <span>docs</span></a>
-  <span class="topbar-tag">doiksub</span>
-  <div class="topbar-spacer"></div>
-  <a href="index.html"           class="topbar-link" data-page="index.html">Home</a>
-  <a href="getting-started.html" class="topbar-link" data-page="getting-started.html">Install</a>
-  <a href="plugins.html"         class="topbar-link" data-page="plugins.html">Plugins</a>
-  <a href="contributing.html"    class="topbar-link" data-page="contributing.html">Contributing</a>
-  <a href="https://github.com/ghxstprey/doiksub" class="topbar-link" target="_blank" rel="noopener">GitHub ↗</a>
-</header>
+  <header class="topbar">
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle sidebar">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+    <a href="index.html" class="topbar-logo">millyrack <span>docs</span></a>
+    <span class="topbar-tag">doiksub</span>
+    <div class="topbar-spacer"></div>
+    <a href="index.html" class="topbar-link" data-page="index.html">Home</a>
+    <a href="getting-started.html" class="topbar-link" data-page="getting-started.html">Install</a>
+    <a href="plugins.html" class="topbar-link" data-page="plugins.html">Plugins</a>
+    <a href="contributing.html" class="topbar-link" data-page="contributing.html">Contributing</a>
+    <a href="https://github.com/ghxstprey/doiksub" class="topbar-link" target="_blank" rel="noopener">GitHub ↗</a>
+  </header>
 
-<div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
 
-<div class="layout">
-  <nav class="sidebar" id="sidebar">
-    <div class="sidebar-section">
-      <div class="sidebar-label">Overview</div>
-      <a href="index.html" class="sidebar-link" data-page="index.html">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        Home
-      </a>
-      <a href="getting-started.html" class="sidebar-link" data-page="getting-started.html">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 14 14"/></svg>
-        Getting Started
-      </a>
-    </div>
-    <div class="sidebar-section">
-      <div class="sidebar-label">On this page</div>
-      <a href="#requirements" class="sidebar-link">Requirements</a>
-      <a href="#windows"      class="sidebar-link">Windows (bat)</a>
-      <a href="#manual"       class="sidebar-link">Manual install</a>
-      <a href="#build"        class="sidebar-link">Build &amp; inject</a>
-      <a href="#new-plugin"   class="sidebar-link">New plugin</a>
-      <a href="#structure"    class="sidebar-link">Repo structure</a>
-    </div>
-    <div class="sidebar-section">
-      <div class="sidebar-label">Reference</div>
-      <a href="plugins.html" class="sidebar-link" data-page="plugins.html">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
-        Plugin Reference
-      </a>
-    </div>
-    <div class="sidebar-section">
-      <div class="sidebar-label">Dev</div>
-      <a href="contributing.html" class="sidebar-link" data-page="contributing.html">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        Contributing
-      </a>
-    </div>
-  </nav>
-
-  <main class="main">
-    <div class="content">
-
-      <h1>Getting Started</h1>
-      <p class="lead">get doiksub installed and injected into Discord in a few steps.</p>
-
-      <h2 id="requirements">Requirements</h2>
-      <ul>
-        <li><a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a> — v18 or later recommended</li>
-        <li><a href="https://pnpm.io" target="_blank" rel="noopener">pnpm</a> — used for package management</li>
-        <li>Discord desktop (Stable, PTB, or Canary)</li>
-      </ul>
-
-      <div class="callout note">
-        <span class="callout-icon">💡</span>
-        <p><strong>Windows users:</strong> if you'd rather skip the manual setup, see the <a href="#windows">Windows batch file</a> method below.</p>
+  <div class="layout">
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-label">Overview</div>
+        <a href="index.html" class="sidebar-link" data-page="index.html">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          Home
+        </a>
+        <a href="getting-started.html" class="sidebar-link" data-page="getting-started.html">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 8 12 12 14 14" />
+          </svg>
+          Getting Started
+        </a>
       </div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">On this page</div>
+        <a href="#requirements" class="sidebar-link">Requirements</a>
+        <a href="#windows" class="sidebar-link">Windows (bat)</a>
+        <a href="#manual" class="sidebar-link">Manual install</a>
+        <a href="#build" class="sidebar-link">Build &amp; inject</a>
+        <a href="#new-plugin" class="sidebar-link">New plugin</a>
+        <a href="#structure" class="sidebar-link">Repo structure</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Reference</div>
+        <a href="plugins.html" class="sidebar-link" data-page="plugins.html">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="7" width="20" height="14" rx="2" />
+            <path d="M16 7V5a2 2 0 0 0-4 0v2" />
+            <line x1="12" y1="12" x2="12" y2="16" />
+            <line x1="10" y1="14" x2="14" y2="14" />
+          </svg>
+          Plugin Reference
+        </a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">Dev</div>
+        <a href="contributing.html" class="sidebar-link" data-page="contributing.html">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          </svg>
+          Contributing
+        </a>
+      </div>
+    </nav>
 
-      <h2 id="windows">Windows — RunOnWindows.bat</h2>
-      <p>the repo ships a batch file that handles everything automatically. just double-click it:</p>
-      <pre><code>RunOnWindows.bat</code></pre>
-      <p>it installs dependencies, builds doiksub, and runs the installer. that's it.</p>
+    <main class="main">
+      <div class="content">
 
-      <h2 id="manual">Manual Install</h2>
-      <ol class="steps">
-        <li>
-          <div class="step-num">1</div>
-          <div class="step-body">
-            <div class="step-title">Clone the repo</div>
-            <pre><code>git clone https://github.com/ghxstprey/doiksub.git
+        <h1>Getting Started</h1>
+        <p class="lead">get doiksub installed and injected into Discord in a few steps.</p>
+
+        <h2 id="requirements">Requirements</h2>
+        <ul>
+          <li><a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a> — v18 or later recommended</li>
+          <li><a href="https://pnpm.io" target="_blank" rel="noopener">pnpm</a> — used for package management</li>
+          <li>Discord desktop (Stable, PTB, or Canary)</li>
+        </ul>
+
+        <div class="callout note">
+          <span class="callout-icon">💡</span>
+          <p><strong>Windows users:</strong> if you'd rather skip the manual setup, see the <a href="#windows">Windows
+              batch file</a> method below.</p>
+        </div>
+
+        <h2 id="windows">Windows — RunOnWindows.bat</h2>
+        <p>the repo ships a batch file that handles everything automatically. just double-click it:</p>
+        <pre><code>RunOnWindows.bat</code></pre>
+        <p>it installs dependencies, builds doiksub, and runs the installer. that's it.</p>
+
+        <h2 id="manual">Manual Install</h2>
+        <ol class="steps">
+          <li>
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <div class="step-title">Clone the repo</div>
+              <pre><code>git clone https://github.com/ghxstprey/doiksub.git
 cd doiksub</code></pre>
-          </div>
-        </li>
-        <li>
-          <div class="step-num">2</div>
-          <div class="step-body">
-            <div class="step-title">Install dependencies</div>
-            <pre><code>pnpm install --frozen-lockfile</code></pre>
-          </div>
-        </li>
-        <li>
-          <div class="step-num">3</div>
-          <div class="step-body">
-            <div class="step-title">Build &amp; inject</div>
-            <pre><code>pnpm build && node scripts/runInstaller.mjs -- --install</code></pre>
-            <p>add <code>-auto</code> to skip the manual injection prompt:</p>
-            <pre><code>pnpm build && node scripts/runInstaller.mjs -- --install -auto</code></pre>
-          </div>
-        </li>
-        <li>
-          <div class="step-num">4</div>
-          <div class="step-body">
-            <div class="step-title">Restart Discord</div>
-            <p>fully quit and relaunch Discord. doiksub should be active.</p>
-          </div>
-        </li>
-      </ol>
+            </div>
+          </li>
+          <li>
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <div class="step-title">Install dependencies</div>
+              <pre><code>pnpm install --frozen-lockfile</code></pre>
+            </div>
+          </li>
+          <li>
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <div class="step-title">Build &amp; inject</div>
+              <pre><code>pnpm build && node scripts/runInstaller.mjs -- --install</code></pre>
+              <p>add <code>-auto</code> to skip the manual injection prompt:</p>
+              <pre><code>pnpm build && node scripts/runInstaller.mjs -- --install -auto</code></pre>
+            </div>
+          </li>
+          <li>
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <div class="step-title">Restart Discord</div>
+              <p>fully quit and relaunch Discord. doiksub should be active.</p>
+            </div>
+          </li>
+        </ol>
 
-      <h2 id="build">Build &amp; Inject (quick ref)</h2>
-      <pre><code># install deps
+        <h2 id="build">Build &amp; Inject (quick ref)</h2>
+        <pre><code># install deps
 pnpm install --frozen-lockfile
 
 # build + inject
@@ -133,33 +155,56 @@ pnpm build && node scripts/runInstaller.mjs -- --install
 # rebuild only (no reinstall needed if already injected)
 pnpm build</code></pre>
 
-      <h2 id="new-plugin">Scaffolding a New Plugin</h2>
-      <p>use the built-in generator to scaffold a new plugin:</p>
-      <pre><code>pnpm new-plugin myPluginName</code></pre>
-      <p>this creates a new folder under <code>src/plugins/myPluginName/</code> with a starter <code>index.ts</code>.</p>
-      <p>see the <a href="contributing.html">Contributing</a> page for plugin rules before you start.</p>
+        <h2 id="new-plugin">Scaffolding a New Plugin</h2>
+        <p>use the built-in generator to scaffold a new plugin:</p>
+        <pre><code>pnpm new-plugin myPluginName</code></pre>
+        <p>this creates a new folder under <code>src/plugins/myPluginName/</code> with a starter <code>index.ts</code>.
+        </p>
+        <p>see the <a href="contributing.html">Contributing</a> page for plugin rules before you start.</p>
 
-      <h2 id="structure">Repo Structure</h2>
-      <div class="plugin-table-wrap">
-        <table>
-          <thead>
-            <tr><th>path</th><th>what's in it</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><code>src/plugins/</code></td><td>all plugins and feature packs</td></tr>
-            <tr><td><code>src/utils/constants.ts</code></td><td><code>doiksubDevs</code> — developer identity list</td></tr>
-            <tr><td><code>scripts/</code></td><td>build tools, installer, plugin generator</td></tr>
-            <tr><td><code>browser/</code></td><td>browser extension build output</td></tr>
-            <tr><td><code>dist/</code></td><td>compiled output (generated)</td></tr>
-            <tr><td><code>packages/</code></td><td>internal workspace packages</td></tr>
-          </tbody>
-        </table>
+        <h2 id="structure">Repo Structure</h2>
+        <div class="plugin-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>path</th>
+                <th>what's in it</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>src/plugins/</code></td>
+                <td>all plugins and feature packs</td>
+              </tr>
+              <tr>
+                <td><code>src/utils/constants.ts</code></td>
+                <td><code>doiksubDevs</code> — developer identity list</td>
+              </tr>
+              <tr>
+                <td><code>scripts/</code></td>
+                <td>build tools, installer, plugin generator</td>
+              </tr>
+              <tr>
+                <td><code>browser/</code></td>
+                <td>browser extension build output</td>
+              </tr>
+              <tr>
+                <td><code>dist/</code></td>
+                <td>compiled output (generated)</td>
+              </tr>
+              <tr>
+                <td><code>packages/</code></td>
+                <td>internal workspace packages</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
       </div>
+    </main>
+  </div>
 
-    </div>
-  </main>
-</div>
-
-<script src="nav.js"></script>
+  <script src="nav.js"></script>
 </body>
+
 </html>
