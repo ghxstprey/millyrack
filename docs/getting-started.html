@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>millyrack</title>
-  <meta name="description" content="How to install, build, and inject doiksub into your Discord client.">
+  <title>millyrack, doiksub install</title>
+  <meta name="description" content="how to install build and inject doiksub into ur discord client">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -23,11 +23,11 @@
     <a href="index.html" class="topbar-logo">millyrack <span>docs</span></a>
     <span class="topbar-tag">doiksub</span>
     <div class="topbar-spacer"></div>
-    <a href="index.html" class="topbar-link" data-page="index.html">Home</a>
-    <a href="getting-started.html" class="topbar-link" data-page="getting-started.html">Install</a>
-    <a href="plugins.html" class="topbar-link" data-page="plugins.html">Plugins</a>
-    <a href="contributing.html" class="topbar-link" data-page="contributing.html">Contributing</a>
-    <a href="https://github.com/ghxstprey/doiksub" class="topbar-link" target="_blank" rel="noopener">GitHub ↗</a>
+    <a href="index.html" class="topbar-link" data-page="index.html">home</a>
+    <a href="getting-started.html" class="topbar-link" data-page="getting-started.html">install</a>
+    <a href="plugins.html" class="topbar-link" data-page="plugins.html">plugins</a>
+    <a href="contributing.html" class="topbar-link" data-page="contributing.html">contributing</a>
+    <a href="https://github.com/ghxstprey/doiksub" class="topbar-link" target="_blank" rel="noopener">github ↗</a>
   </header>
 
   <div class="sidebar-overlay" id="sidebar-overlay"></div>
@@ -35,33 +35,33 @@
   <div class="layout">
     <nav class="sidebar" id="sidebar">
       <div class="sidebar-section">
-        <div class="sidebar-label">Overview</div>
+        <div class="sidebar-label">overview</div>
         <a href="index.html" class="sidebar-link" data-page="index.html">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
             <polyline points="9 22 9 12 15 12 15 22" />
           </svg>
-          Home
+          home
         </a>
         <a href="getting-started.html" class="sidebar-link" data-page="getting-started.html">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="10" />
             <polyline points="12 8 12 12 14 14" />
           </svg>
-          Getting Started
+          getting started
         </a>
       </div>
       <div class="sidebar-section">
-        <div class="sidebar-label">On this page</div>
-        <a href="#requirements" class="sidebar-link">Requirements</a>
-        <a href="#windows" class="sidebar-link">Windows (bat)</a>
-        <a href="#manual" class="sidebar-link">Manual install</a>
-        <a href="#build" class="sidebar-link">Build &amp; inject</a>
-        <a href="#new-plugin" class="sidebar-link">New plugin</a>
-        <a href="#structure" class="sidebar-link">Repo structure</a>
+        <div class="sidebar-label">on this page</div>
+        <a href="#requirements" class="sidebar-link">requirements</a>
+        <a href="#windows" class="sidebar-link">windows (bat)</a>
+        <a href="#manual" class="sidebar-link">manual install</a>
+        <a href="#build" class="sidebar-link">build &amp; inject</a>
+        <a href="#new-plugin" class="sidebar-link">new plugin</a>
+        <a href="#structure" class="sidebar-link">repo structure</a>
       </div>
       <div class="sidebar-section">
-        <div class="sidebar-label">Reference</div>
+        <div class="sidebar-label">reference</div>
         <a href="plugins.html" class="sidebar-link" data-page="plugins.html">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="2" y="7" width="20" height="14" rx="2" />
@@ -69,11 +69,11 @@
             <line x1="12" y1="12" x2="12" y2="16" />
             <line x1="10" y1="14" x2="14" y2="14" />
           </svg>
-          Plugin Reference
+          plugin reference
         </a>
       </div>
       <div class="sidebar-section">
-        <div class="sidebar-label">Dev</div>
+        <div class="sidebar-label">dev</div>
         <a href="contributing.html" class="sidebar-link" data-page="contributing.html">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
@@ -81,7 +81,7 @@
             <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
             <path d="M16 3.13a4 4 0 0 1 0 7.75" />
           </svg>
-          Contributing
+          contributing
         </a>
       </div>
     </nav>
@@ -89,33 +89,51 @@
     <main class="main">
       <div class="content">
 
-        <h1>Getting Started</h1>
-        <p class="lead">get doiksub installed and injected into Discord in a few steps.</p>
+        <h1>getting started</h1>
+        <p class="lead">get doiksub installed and injected into ur discord in a few steps.</p>
 
-        <h2 id="requirements">Requirements</h2>
+        <h2 id="requirements">requirements</h2>
         <ul>
-          <li><a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a> — v18 or later recommended</li>
-          <li><a href="https://pnpm.io" target="_blank" rel="noopener">pnpm</a> — used for package management</li>
-          <li>Discord desktop (Stable, PTB, or Canary)</li>
+          <li><a href="https://nodejs.org" target="_blank" rel="noopener">node.js</a> - v18 or later</li>
+          <li><a href="https://pnpm.io" target="_blank" rel="noopener">pnpm</a> - used for package management</li>
+          <li>discord desktop</li>
         </ul>
+        <!-- add drop down menu -->
+        <details>
+          <summary>windows</summary>
+          <ul>
+            <li>
+              <p><strong>stable</strong></p>
+            </li>
+            <li>
+              <p><strong>canary</strong></p>
+            </li>
+            <li>
+              <p><strong>ptb</strong></p>
+            </li>
+          </ul>
+          <p>or, <strong>winget</strong>. there's another official discord client called Discord Development. use winget
+            to
+            install it:</p>
+          <pre><code>winget install -e --id Discord.Discord.Development</code></pre>
+        </details>
 
         <div class="callout note">
-          <span class="callout-icon">💡</span>
-          <p><strong>Windows users:</strong> if you'd rather skip the manual setup, see the <a href="#windows">Windows
-              batch file</a> method below.</p>
+          <p><strong>windows users:</strong> if u wanna skip the manual setup just check the <a href="#windows">windows
+              bat file</a> below.</p>
         </div>
 
-        <h2 id="windows">Windows — RunOnWindows.bat</h2>
-        <p>the repo ships a batch file that handles everything automatically. just double-click it:</p>
+        <h2 id="windows">windows - RunOnWindows.bat</h2>
+        <p>the repo ships with a bat file that handles everything automatically. just double click it:</p>
         <pre><code>RunOnWindows.bat</code></pre>
-        <p>it installs dependencies, builds doiksub, and runs the installer. that's it.</p>
+        <p>it installs deps, builds doiksub and runs the installer.</p>
 
-        <h2 id="manual">Manual Install</h2>
+        <h2 id="manual">manual install</h2>
         <ol class="steps">
           <li>
             <div class="step-num">1</div>
             <div class="step-body">
-              <div class="step-title">Clone the repo</div>
+              <div class="step-title">clone the repo</div>
               <pre><code>git clone https://github.com/ghxstprey/doiksub.git
 cd doiksub</code></pre>
             </div>
@@ -123,52 +141,47 @@ cd doiksub</code></pre>
           <li>
             <div class="step-num">2</div>
             <div class="step-body">
-              <div class="step-title">Install dependencies</div>
+              <div class="step-title">install dependencies</div>
               <pre><code>pnpm install --frozen-lockfile</code></pre>
             </div>
           </li>
           <li>
             <div class="step-num">3</div>
             <div class="step-body">
-              <div class="step-title">Build &amp; inject</div>
+              <div class="step-title">build &amp; inject</div>
               <pre><code>pnpm build && node scripts/runInstaller.mjs -- --install</code></pre>
-              <p>add <code>-auto</code> to skip the manual injection prompt:</p>
+              <p>add <code>-auto</code> to skip the manual injection prompt. useful for when you only have one install.
+              </p>
               <pre><code>pnpm build && node scripts/runInstaller.mjs -- --install -auto</code></pre>
             </div>
           </li>
           <li>
             <div class="step-num">4</div>
             <div class="step-body">
-              <div class="step-title">Restart Discord</div>
-              <p>fully quit and relaunch Discord. doiksub should be active.</p>
+              <div class="step-title">restart discord</div>
+              <p>fully quit and relaunch discord. doiksub should be active. if it isnt, fuck it all.</p>
             </div>
           </li>
         </ol>
 
-        <h2 id="build">Build &amp; Inject (quick ref)</h2>
-        <pre><code># install deps
-pnpm install --frozen-lockfile
+        <h2 id="build">build &amp; inject (quick ref)</h2>
+        <pre><code>pnpm install --frozen-lockfile
+pnpm build && node scripts/runInstaller.mjs -- --install</code></pre>
 
-# build + inject
-pnpm build && node scripts/runInstaller.mjs -- --install
-
-# rebuild only (no reinstall needed if already injected)
-pnpm build</code></pre>
-
-        <h2 id="new-plugin">Scaffolding a New Plugin</h2>
-        <p>use the built-in generator to scaffold a new plugin:</p>
+        <h2 id="new-plugin">scaffolding a new plugin</h2>
+        <p>use the built in generator to scaffold a new plugin:</p>
         <pre><code>pnpm new-plugin myPluginName</code></pre>
         <p>this creates a new folder under <code>src/plugins/myPluginName/</code> with a starter <code>index.ts</code>.
         </p>
-        <p>see the <a href="contributing.html">Contributing</a> page for plugin rules before you start.</p>
+        <p>check the <a href="contributing.html">contributing</a> page for plugin rules before u start.</p>
 
-        <h2 id="structure">Repo Structure</h2>
+        <h2 id="structure">repo structure (only the useful parts)</h2>
         <div class="plugin-table-wrap">
           <table>
             <thead>
               <tr>
                 <th>path</th>
-                <th>what's in it</th>
+                <th>whats in it</th>
               </tr>
             </thead>
             <tbody>
@@ -178,23 +191,11 @@ pnpm build</code></pre>
               </tr>
               <tr>
                 <td><code>src/utils/constants.ts</code></td>
-                <td><code>doiksubDevs</code> — developer identity list</td>
+                <td><code>doiksubDevs</code> - new dev identity list</td>
               </tr>
               <tr>
                 <td><code>scripts/</code></td>
                 <td>build tools, installer, plugin generator</td>
-              </tr>
-              <tr>
-                <td><code>browser/</code></td>
-                <td>browser extension build output</td>
-              </tr>
-              <tr>
-                <td><code>dist/</code></td>
-                <td>compiled output (generated)</td>
-              </tr>
-              <tr>
-                <td><code>packages/</code></td>
-                <td>internal workspace packages</td>
               </tr>
             </tbody>
           </table>

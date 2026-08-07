@@ -320,12 +320,29 @@ pre code {
   color: #e4e4f0;
 }
 
+details {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  margin-bottom: 20px;
+}
+
+details summary {
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+}
+
+details p {
+  margin-bottom: 0;
+}
+
 .callout {
   display: flex;
   gap: 12px;
   padding: 14px 16px;
   border-radius: var(--radius);
-  border-left: 3px solid;
   margin-bottom: 20px;
   font-size: 13.5px;
 }
@@ -337,17 +354,14 @@ pre code {
 
 .callout.note {
   background: rgba(99, 102, 241, .1);
-  border-color: #6366f1;
 }
 
 .callout.tip {
   background: rgba(34, 197, 94, .08);
-  border-color: #22c55e;
 }
 
 .callout.warn {
   background: rgba(245, 158, 11, .08);
-  border-color: #f59e0b;
 }
 
 .callout p {
