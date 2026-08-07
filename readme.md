@@ -4,4 +4,4 @@ what is millyrack? it's basically just the "read the docs" for doiksub and relat
 
 ## url?
 
-im broke, so im using pages.dev (cloudflare hosting). [click here for the docs](https://millyrack.pages.dev)
+im broke, so im using pages.dev (cloudflare hosting). [click here for the docs](https://millyrack.pages.dev). it has also a [github pages mirror](https://ghxstprey.github.io/millyrack/)
