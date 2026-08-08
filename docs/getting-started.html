@@ -54,22 +54,13 @@
       </div>
       <div class="sidebar-section">
         <div class="sidebar-label">on this page</div>
-        <a href="#how-to-pr" class="sidebar-link">pull requests</a>
-        <a href="#write-plugin" class="sidebar-link">writing plugins</a>
-        <a href="#plugin-rules" class="sidebar-link">plugin rules</a>
-        <a href="#ai-notice" class="sidebar-link">ai policy</a>
-      </div>
-      <div class="sidebar-section">
-        <div class="sidebar-label">reference</div>
-        <a href="plugins.html" class="sidebar-link" data-page="plugins.html">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="2" y="7" width="20" height="14" rx="2" />
-            <path d="M16 7V5a2 2 0 0 0-4 0v2" />
-            <line x1="12" y1="12" x2="12" y2="16" />
-            <line x1="10" y1="14" x2="14" y2="14" />
-          </svg>
-          plugin reference
-        </a>
+        <a href="#requirements" class="sidebar-link">requirements / downloads</a>
+        <a href="#windows" class="sidebar-link">windows bat</a>
+        <a href="#manual" class="sidebar-link">manual install</a>
+        <a href="#build" class="sidebar-link">quick ref</a>
+        <a href="#web" class="sidebar-link">browser extension</a>
+        <a href="#new-plugin" class="sidebar-link">new plugin</a>
+        <a href="#structure" class="sidebar-link">repo structure</a>
       </div>
       <div class="sidebar-section">
         <div class="sidebar-label">dev</div>
@@ -121,13 +112,20 @@
         <h1>getting started</h1>
         <p class="lead">get doiksub installed and injected into ur discord in a few steps.</p>
 
-        <h2 id="requirements">requirements</h2>
+        <h2 id="requirements">what u need first (go download these)</h2>
+        <p>before u can even download the repo, u need these. click the links and grab em:</p>
         <ul>
-          <li><a href="https://nodejs.org" target="_blank" rel="noopener">node.js</a> - v18 or later</li>
-          <li><a href="https://pnpm.io" target="_blank" rel="noopener">pnpm</a> - used for package management</li>
-          <li>discord desktop</li>
+          <li><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git</a> - so u can clone the repo
+            in the first place (and <code>git pull</code> when an update drops)</li>
+          * do note, you can download the repo's zip without git by clicking the green "code" button on the github page,
+          git just makes it easier
+          <li><a href="https://nodejs.org" target="_blank" rel="noopener">node.js</a> - <strong>v22 or later</strong>,
+            the lts installer is fine</li>
+          <li><a href="https://pnpm.io/installation" target="_blank" rel="noopener">pnpm</a> - package manager. once
+            node is in, just <code>npm i -g pnpm</code></li>
+          <li>discord desktop (for the desktop install below)</li>
         </ul>
-        <!-- add drop down menu -->
+        <p>nothing else, i promise. u also need a terminal, but u probably have one.</p>
         <details>
           <summary>windows</summary>
           <ul>
@@ -155,7 +153,8 @@
         <h2 id="windows">windows - RunOnWindows.bat</h2>
         <p>the repo ships with a bat file that handles everything automatically. just double click it:</p>
         <pre><code>RunOnWindows.bat</code></pre>
-        <p>it installs deps, builds doiksub and runs the installer.</p>
+        <p>it installs deps, builds doiksub and runs the installer. no need to have any installer binary before -
+          if it's missing the script pulls vencord's public installer automatically.</p>
 
         <h2 id="manual">manual install</h2>
         <ol class="steps">
@@ -177,11 +176,14 @@ cd doiksub</code></pre>
           <li>
             <div class="step-num">3</div>
             <div class="step-body">
-              <div class="step-title">build &amp; inject</div>
+              <div class="step-title">build and inject</div>
               <pre><code>pnpm build && node scripts/runInstaller.mjs -- --install</code></pre>
               <p>add <code>-auto</code> to skip the manual injection prompt. useful for when you only have one install.
               </p>
               <pre><code>pnpm build && node scripts/runInstaller.mjs -- --install -auto</code></pre>
+              <p>don't worry about going off and building the installer yourself - if the local one isn't there,
+                the script just grabs <a href="https://github.com/Vencord/Installer" target="_blank"
+                  rel="noopener">vencord's public installer</a> and uses it against our build.</p>
             </div>
           </li>
           <li>
@@ -193,10 +195,55 @@ cd doiksub</code></pre>
           </li>
         </ol>
 
-        <h2 id="build">build &amp; inject (quick ref)</h2>
+        <h2 id="build">build and inject (quick ref)</h2>
         <pre><code>pnpm install --frozen-lockfile
 pnpm build && node scripts/runInstaller.mjs -- --install</code></pre>
 
+        <h2 id="web">browser extension (web build)</h2>
+        <p>no discord desktop? doiksub also builds as a <strong>browser extension</strong> for <code>discord.com</code>.
+          it is <em>not</em> on any webstore - u build it yourself, which keeps it yours (and keeps me out of paying
+          webstores lol).</p>
+        <ol class="steps">
+          <li>
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <div class="step-title">build the web bundle</div>
+              <pre><code>pnpm buildWeb</code></pre>
+              <p>this drops a bunch of stuff in <code>dist/</code>, but the bits u care about are the unpacked extension
+                folders.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <div class="step-title">chrome / edge / brave</div>
+              <p>open <a href="chrome://extensions">chrome://extensions</a> (edge: <a
+                  href="edge://extensions">edge://extensions</a>), flip on <strong>developer
+                  mode</strong> (top right), hit <strong>load unpacked</strong> and pick:</p>
+              <pre><code>dist/chromium-unpacked</code></pre>
+              <p>firefox: open <a href="about:debugging#/runtime/this-firefox">about:debugging#/runtime/this-firefox</a>
+                > <strong>load temporary add-on</strong> > <code>dist/firefox-unpacked/manifest.json</code>. if you
+                close firefox, you'll need to repeat this process. sorry.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <div class="step-title">open discord</div>
+              <p>go to <a href="https://discord.com/app">discord.com</a> and the mod injects itself. works the same as
+                the desktop. open normal discord settings, new category will be there.</p>
+            </div>
+          </li>
+        </ol>
+        <div class="callout note">
+          <p><strong>about the webstore thing again:</strong> u load this as an unpacked extension every build. after a
+            doiksub update, just <code>pnpm buildWeb</code> again and reload the extension in the extensions page.
+            annoying, but easy.
+          </p>
+        </div>
+        <p>if you want themes, you have to use the extension build. there's also a tampermonkey userscript at
+          <code>dist/Vencord.user.js</code> if ur into that, but themes and quickcss are disabled on it.
+        </p>
         <h2 id="new-plugin">scaffolding a new plugin</h2>
         <p>use the built in generator to scaffold a new plugin:</p>
         <pre><code>pnpm new-plugin myPluginName</code></pre>
@@ -214,6 +261,10 @@ pnpm build && node scripts/runInstaller.mjs -- --install</code></pre>
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <td><code>src/dist/</code></td>
+                <td>website extensions plus other stuffy stuff</td>
+              </tr>
               <tr>
                 <td><code>src/plugins/</code></td>
                 <td>all plugins and feature packs</td>
