@@ -5,8 +5,10 @@
             "badge": "https://millyrack.pages.dev/v1/badges/froggy/badge.png"
         }
     ],
-    "1517254170984448103": {
-        "tooltip": "twist",
-        "badge": "https://millyrack.pages.dev/v1/badges/oddy/badge.png"
-    }
+    "1517254170984448103": [
+        {
+            "tooltip": "twist",
+            "badge": "https://millyrack.pages.dev/v1/badges/oddy/badge.png"
+        }
+    ]
 }
