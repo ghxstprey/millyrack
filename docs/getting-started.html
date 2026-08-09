@@ -25,9 +25,9 @@
     <div class="topbar-spacer"></div>
     <a href="index.html" class="topbar-link" data-page="index.html">home</a>
     <a href="getting-started.html" class="topbar-link" data-page="getting-started.html">install</a>
-    <a href="plugins.html" class="topbar-link" data-page="plugins.html">plugins</a>
     <a href="contributing.html" class="topbar-link" data-page="contributing.html">contributing</a>
     <a href="https://github.com/ghxstprey/doiksub" class="topbar-link" target="_blank" rel="noopener">github</a>
+    <a href="https://ghxstprey.pages.dev/join" class="topbar-link" target="_blank" rel="noopener">server</a>
   </header>
 
   <div class="sidebar-overlay" id="sidebar-overlay"></div>
@@ -139,9 +139,8 @@
               <p><strong>ptb</strong></p>
             </li>
           </ul>
-          <p>or, <strong>winget</strong>. there's another official discord client called Discord Development. use winget
-            to
-            install it:</p>
+          <p>or, <strong>winget</strong>. there's another official discord client called Discord Development (basically
+            canary's canary). use winget to install it:</p>
           <pre><code>winget install -e --id Discord.Discord.Development</code></pre>
         </details>
 
@@ -181,9 +180,9 @@ cd doiksub</code></pre>
               <p>add <code>-auto</code> to skip the manual injection prompt. useful for when you only have one install.
               </p>
               <pre><code>pnpm build && node scripts/runInstaller.mjs -- --install -auto</code></pre>
-              <p>don't worry about going off and building the installer yourself - if the local one isn't there,
-                the script just grabs <a href="https://github.com/Vencord/Installer" target="_blank"
-                  rel="noopener">vencord's public installer</a> and uses it against our build.</p>
+              <p>don't worry about going off and building the installer yourself, the script just grabs <a
+                  href="https://github.com/Vencord/Installer" target="_blank" rel="noopener">vencord's public
+                  installer</a> and uses it against our build.</p>
             </div>
           </li>
           <li>
@@ -201,42 +200,51 @@ pnpm build && node scripts/runInstaller.mjs -- --install</code></pre>
 
         <h2 id="web">browser extension (web build)</h2>
         <p>no discord desktop? doiksub also builds as a <strong>browser extension</strong> for <code>discord.com</code>.
-          it is <em>not</em> on any webstore - u build it yourself, which keeps it yours (and keeps me out of paying
-          webstores lol).</p>
+          it is <strong>not</strong> on any webstore - u build it yourself, which keeps it yours (and keeps me out of
+          paying webstores lol).</p>
+        <p>quick note, if you don't want to build it yourself (or can't for whatever reason), i do provide the zips for
+          firefox and chrome in the <a href="https://github.com/ghxstprey/doiksub/tree/main/assets/releases"
+            target="_blank">assets/releases</a> on github. there's also a userscript, though read lower to see why
+          extensions are better.</p>
         <ol class="steps">
           <li>
             <div class="step-num">1</div>
             <div class="step-body">
               <div class="step-title">build the web bundle</div>
               <pre><code>pnpm buildWeb</code></pre>
-              <p>this drops a bunch of stuff in <code>dist/</code>, but the bits u care about are the unpacked extension
-                folders.</p>
+              <p>this drops a bunch of stuff in <code>dist/</code>, but the bits u care about are the unpacked
+                extension folders (or the zips as well).</p>
             </div>
           </li>
           <li>
             <div class="step-num">2</div>
             <div class="step-body">
               <div class="step-title">chrome / edge / brave</div>
-              <p>open <a href="chrome://extensions">chrome://extensions</a> (edge: <a
-                  href="edge://extensions">edge://extensions</a>), flip on <strong>developer
+              <p>open <a href="chrome://extensions">chrome://extensions</a> (the browsers will automatically convert
+                chrome to whatever brand... probably), flip on <strong>developer
                   mode</strong> (top right), hit <strong>load unpacked</strong> and pick:</p>
               <pre><code>dist/chromium-unpacked</code></pre>
               <p>firefox: open <a href="about:debugging#/runtime/this-firefox">about:debugging#/runtime/this-firefox</a>
-                > <strong>load temporary add-on</strong> > <code>dist/firefox-unpacked/manifest.json</code>. if you
-                close firefox, you'll need to repeat this process. sorry.</p>
+                > <strong>load temporary add-on</strong> > <code>dist/firefox-unpacked/manifest.json</code> or
+                <code>dist/extension-firefox.zip</code>. if you close firefox, you'll need to repeat this process.
+                sorry. might be able to hack together a folder in firefox itself so it tricks to persisting, but i
+                haven't tried. plus, updates would be nonexistent.
+              </p>
             </div>
           </li>
           <li>
             <div class="step-num">3</div>
             <div class="step-body">
               <div class="step-title">open discord</div>
-              <p>go to <a href="https://discord.com/app">discord.com</a> and the mod injects itself. works the same as
+              <p>go to <a href="https://discord.com/app">discord.com</a> and the mod injects itself. works the same
+                as
                 the desktop. open normal discord settings, new category will be there.</p>
             </div>
           </li>
         </ol>
         <div class="callout note">
-          <p><strong>about the webstore thing again:</strong> u load this as an unpacked extension every build. after a
+          <p><strong>about the webstore thing again:</strong> u load this as an unpacked extension every build.
+            after a
             doiksub update, just <code>pnpm buildWeb</code> again and reload the extension in the extensions page.
             annoying, but easy.
           </p>
@@ -247,7 +255,8 @@ pnpm build && node scripts/runInstaller.mjs -- --install</code></pre>
         <h2 id="new-plugin">scaffolding a new plugin</h2>
         <p>use the built in generator to scaffold a new plugin:</p>
         <pre><code>pnpm new-plugin myPluginName</code></pre>
-        <p>this creates a new folder under <code>src/plugins/myPluginName/</code> with a starter <code>index.ts</code>.
+        <p>this creates a new folder under <code>src/plugins/myPluginName/</code> with a starter
+          <code>index.ts</code>.
         </p>
         <p>check the <a href="contributing.html">contributing</a> page for plugin rules before u start.</p>
 
@@ -271,11 +280,15 @@ pnpm build && node scripts/runInstaller.mjs -- --install</code></pre>
               </tr>
               <tr>
                 <td><code>src/utils/constants.ts</code></td>
-                <td><code>doiksubDevs</code> - new dev identity list</td>
+                <td>hosts stuff you'll need, also has dev ids, so add yourself here if you fork.</td>
               </tr>
               <tr>
                 <td><code>scripts/</code></td>
                 <td>build tools, installer, plugin generator</td>
+              </tr>
+              <tr>
+                <td><code>assets/</code></td>
+                <td>has releases, icons, badges, etc.</td>
               </tr>
             </tbody>
           </table>
