@@ -37,6 +37,7 @@ body {
   line-height: 1.65;
   font-size: 15px;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -216,9 +217,16 @@ body {
   min-width: 0;
 }
 
+.content img {
+  max-width: 100%;
+  height: auto;
+}
+
 .content {
   max-width: 800px;
   padding: 48px 48px 80px;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 h1 {
@@ -310,6 +318,8 @@ pre {
   overflow-x: auto;
   margin-bottom: 20px;
   position: relative;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 
 pre code {
@@ -318,6 +328,21 @@ pre code {
   padding: 0;
   font-size: .875rem;
   color: #e4e4f0;
+  word-break: break-word;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .83em;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 6px;
+  color: #c4b5fd;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 details {
@@ -492,11 +517,14 @@ details p {
   border-radius: var(--radius);
   overflow: hidden;
   margin-bottom: 28px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
+  min-width: 480px;
 }
 
 thead {
@@ -512,6 +540,7 @@ th {
   color: var(--text-dim);
   padding: 10px 16px;
   border-bottom: 1px solid var(--border);
+  white-space: nowrap;
 }
 
 td {
@@ -746,6 +775,8 @@ td:first-child code {
 @media (max-width: 900px) {
   .sidebar {
     transform: translateX(-100%);
+    width: 85vw;
+    max-width: 300px;
   }
 
   .sidebar.open {
@@ -779,6 +810,16 @@ td:first-child code {
   }
 }
 
+@media (max-width: 680px) {
+  .topbar-link {
+    display: none;
+  }
+
+  .topbar-tag {
+    display: none;
+  }
+}
+
 @media (max-width: 520px) {
   .content {
     padding: 24px 16px 56px;
@@ -798,5 +839,74 @@ td:first-child code {
 
   td {
     font-size: 12px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero {
+    padding: 40px 0 32px;
+  }
+
+  .hero-badge {
+    font-size: 10px;
+    padding: 3px 10px;
+  }
+
+  h2 {
+    font-size: 1.15rem;
+    margin-top: 32px;
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin-top: 22px;
+  }
+
+  .dev-avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .dev-card {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .dev-name {
+    font-size: 13px;
+  }
+
+  .dev-handle {
+    font-size: 11px;
+  }
+
+  .dev-focus {
+    font-size: 11.5px;
+  }
+
+  .step-num {
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+  }
+
+  .step-body {
+    min-width: 0;
+  }
+
+  .callout {
+    padding: 12px 14px;
+    font-size: 12.5px;
+  }
+
+  .btn {
+    font-size: 12.5px;
+    padding: 8px 14px;
   }
 }
